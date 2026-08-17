@@ -1,0 +1,13 @@
+data/meta/*.parquet
+data/meta/*.csv.gz
+data/meta/*.pdf
+*.fastq.gz
+*.bam
+*.bai
+*.vcf.gz
+work/
+results/
+.nextflow*
+.Rhistory
+.RData
+.Rproj.user/
