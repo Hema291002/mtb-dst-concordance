@@ -10,7 +10,7 @@ has been inspected.
 | 2. Metadata acquisition | complete | CRyPTIC v3.4.0, Zenodo 15680920 |
 | 3. Sample selection | complete | 30 isolates, seed 42, balanced 8/7/7/8 |
 | 4. Reference genome | not started | |
-| 5. FASTQ download | not started | |
+| 5. FASTQ download | complete | | 5. FASTQ download | complete | 60 files, 9.2 GB, all MD5-verified. 2 files failed checksum on first download and were re-fetched. | |
 | 6. Raw read QC | not started | |
 | 7. Trimming | not started | |
 | 8. Alignment | not started | |
