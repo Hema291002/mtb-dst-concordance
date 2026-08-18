@@ -1,0 +1,26 @@
+isolates with both INH and RIF: 57756
+usable sequencing runs: 49319
+isolates passing genome QC: 47279
+pool after join: 38652
+pool after one-per-subject: 37962
+
+INH x RIF contingency:
+RIF      R      S
+INH              
+R    11896   3323
+S      785  21958
+
+median MB per isolate: 350.1
+
+depth summary:
+count    37962.000000
+mean       117.338384
+std         70.591113
+min         40.005100
+25%         72.708275
+50%         99.472450
+75%        142.509500
+max       3062.710000
+Name: TB_DEPTH, dtype: float64
+
+saved candidate_pool.parquet

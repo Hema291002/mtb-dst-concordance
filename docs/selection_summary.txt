@@ -1,0 +1,22 @@
+pool within depth band: 21825
+RIF     R      S
+INH             
+R    6569   2011
+S     410  12835
+
+selected: 30
+RIF  R  S
+INH      
+R    8  7
+S    7  8
+
+total download GB: 9.24
+
+datasets represented:
+dataset
+CRyPTIC-v1.0    26
+CRyPTIC-v2.0     2
+CRyPTIC-v3.0     2
+Name: count, dtype: int64
+
+wrote assets/samplesheet.csv
