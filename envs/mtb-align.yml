@@ -1,0 +1,9 @@
+name: mtb-align
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bwa-mem2
+  - samtools>=1.19
+  - mosdepth
+  - multiqc
