@@ -1,0 +1,64 @@
+======================================================================
+WGS_SAMPLES (54565, 24)
+['run_accession', 'study_accession', 'sample_accession', 'center_name', 'country', 'location', 'first_public', 'fastq_ftp', 'fastq_md5', 'fastq_bytes', 'has_effects', 'has_mutations', 'has_predictions', 'has_genome', 'status', 'has_multiple_ena_run_accessions', 'pathogena_sample_name', 'pathogena_batch_name', 'pathogena_batch_id', 'in_mapping_file', 'group', 'in_final_tables', 'dataset', 'has_variants']
+                                         run_accession study_accession sample_accession                                                                                           center_name country location first_public                                                                                                                                          fastq_ftp                                                          fastq_md5         fastq_bytes  has_effects  has_mutations  has_predictions  has_genome    status  has_multiple_ena_run_accessions                 pathogena_sample_name pathogena_batch_name                    pathogena_batch_id  in_mapping_file  group  in_final_tables       dataset has_variants
+UNIQUEID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+site.05.subj.PTAN-0001.lab.TAN-001.iso.1    ERR2184202      PRJEB23245   SAMEA104362043  University of Oxford;Nuffield Department of Medicine (NDM);Universidad Peruana Cayetano Heredia;Peru     NaN      NaN   2019-06-12  ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/002/ERR2184202/ERR2184202_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/002/ERR2184202/ERR2184202_2.fastq.gz  612e42126398723aa1ee84dd1e06feec;349b4db6faead49151951f709097eabb  79400918;105468452         True           True             True        True  complete                            False  90aa9101-3ea3-463f-a8d3-80c2ef8dd7e9               p5rsir  2d1dd417-22a5-48c3-a761-8c53424cdb3e             True    0.0             True  CRyPTIC-v1.0         None
+site.05.subj.PTAN-0002.lab.TAN-004.iso.1    ERR2184203      PRJEB23245   SAMEA104362044  University of Oxford;Nuffield Department of Medicine (NDM);Universidad Peruana Cayetano Heredia;Peru     NaN      NaN   2019-06-12  ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/003/ERR2184203/ERR2184203_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/003/ERR2184203/ERR2184203_2.fastq.gz  469becc8e8fb3961bde32b5352858190;b13aca3a9005cf7a291ae0c00761fe2e   67987132;86536083         True           True             True        True  complete                            False  542a5aa1-0f75-48f8-9ec2-3540936e08a9               p5rsir  2d1dd417-22a5-48c3-a761-8c53424cdb3e             True    0.0             True  CRyPTIC-v1.0         None
+site.05.subj.PTAN-0003.lab.TAN-006.iso.1    ERR2184204      PRJEB23245   SAMEA104362045  University of Oxford;Nuffield Department of Medicine (NDM);Universidad Peruana Cayetano Heredia;Peru     NaN      NaN   2019-06-12  ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/004/ERR2184204/ERR2184204_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/ERR218/004/ERR2184204/ERR2184204_2.fastq.gz  d97d6b0ae3ba59f6bfa19e304ac8d94f;022a232fe2db3ae091059dae9615bd4f   57530779;72231695         True           True             True        True  complete                            False  ac74a574-3184-4dfc-8a5a-eac7c8ba6c99               p5rsir  2d1dd417-22a5-48c3-a761-8c53424cdb3e             True    0.0             True  CRyPTIC-v1.0         None
+
+======================================================================
+DST_SAMPLES (65842, 2)
+['NUMBER_DST', 'COUNTRY_CODE']
+                                           NUMBER_DST COUNTRY_CODE
+UNIQUEID                                                          
+site.00.subj.1000347.lab.H111540004.iso.1           8          GBR
+site.00.subj.1000595.lab.H123460044.iso.1           9          GBR
+site.00.subj.1004213.lab.H111060034.iso.1           8          GBR
+
+======================================================================
+DST_MEASUREMENTS (660961, 8)
+['SOURCE', 'METHOD_1', 'METHOD_2', 'METHOD_3', 'METHOD_CC', 'METHOD_MIC', 'PHENOTYPE', 'QUALITY']
+                                                 SOURCE      METHOD_1 METHOD_2   METHOD_3 METHOD_CC METHOD_MIC PHENOTYPE QUALITY
+UNIQUEID                             DRUG                                                                                       
+site.24.subj.PT-2.lab.1997-606.iso.1 RIF   SEQTREAT2020  liquid media     MGIT  BACTEC460       1.0        NaN         S  MEDIUM
+                                     INH   SEQTREAT2020  liquid media     MGIT  BACTEC460       0.1        NaN         S  MEDIUM
+                                     EMB   SEQTREAT2020  liquid media     MGIT  BACTEC460       5.0        NaN         S  MEDIUM
+
+======================================================================
+GENOMES (54057, 10)
+['SPECIES', 'N_LINEAGES', 'LINEAGE', 'SUBLINEAGE', 'MYCOBACTERIAL_READS', 'TB_READS', 'TB_COVERAGE', 'TB_DEPTH', 'ANTIBIOGRAM', 'PIPELINE_BUILD']
+                                                      SPECIES  N_LINEAGES   LINEAGE    SUBLINEAGE  MYCOBACTERIAL_READS  TB_READS  TB_COVERAGE  TB_DEPTH     ANTIBIOGRAM PIPELINE_BUILD
+UNIQUEID                                                                                                                                                                              
+site.10.subj.YA00019967.lab.YA00019967.iso.1  M. tuberculosis           1  lineage1  lineage1.2.2              3923920   3844218      99.4005  126.3520  RRRRUUSSSSRSRS        88cb074
+site.ENA.subj.SAMEA1019012.lab.1.iso.1        M. tuberculosis           1  lineage4   lineage4.10              5786288   5653086      98.2433   88.6138  SSSSSSSSSSUSSU        149a518
+site.04.subj.06941.lab.932089.iso.1           M. tuberculosis           1  lineage2  lineage2.2.3              3839640   3769897      99.5663  118.3380  RRRRRRSSRRRSRS        d5f9cd0
+
+======================================================================
+Columns after reset_index: ['UNIQUEID', 'DRUG', 'SOURCE', 'METHOD_1', 'METHOD_2', 'METHOD_3', 'METHOD_CC', 'METHOD_MIC', 'PHENOTYPE', 'QUALITY']
+
+INH/RIF rows: 140470
+
+PHENOTYPE   I      R      S     U  NaN
+DRUG                                  
+INH        35  27839  40539  1516  366
+RIF        29  21951  45849  2023  323
+
+QUALITY   HIGH   LOW  MEDIUM
+DRUG                        
+INH      18157   945   51193
+RIF      17844  1552   50779
+
+SOURCE values for INH/RIF:
+SOURCE
+CRyPTIC             43363
+SEQTREAT2020        22219
+NEJM2018            20130
+KMVALIDATION2025    15104
+CLIRES2020          12372
+PHE2019              8410
+LID2015              6849
+WHO2019              4484
+CLIRES2023           4121
+MUMBAI2018           3114
+Name: count, dtype: int64

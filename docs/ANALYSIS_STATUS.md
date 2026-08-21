@@ -12,9 +12,9 @@ has been inspected.
 | 4. Reference genome | complete | H37Rv GCF_000195955.2 (NC_000962.3), 4,411,532 bp; FASTA and GFF contig names verified to match |
 | 5. FASTQ download | complete | 60 files, 9.2 GB, all MD5-verified. 2 files failed checksum on first download and were re-fetched. |
 | 6. Raw read QC | complete | FastQC + MultiQC on 60 files. All pairs read-count matched. GC 63-66% across all samples, consistent with M. tuberculosis, no contamination signal. Estimated raw coverage 65-166x (median 110x). Read lengths heterogeneous: 80/100/150/151 bp. |
-| 7. Trimming | not started | |
-| 8. Alignment | not started | |
-| 9. Post-alignment QC | not started | |
+| 7. Trimming | complete | fastp 1.3.6, adapter auto-detect (Nextera found, not TruSeq), tail-only Q20 trimming, min length 50. All 30 retained, pass rate 91.9-99.7%. Post-trim coverage 64-144x. |
+| 8. Alignment | complete | bwa-mem2 2.2.1 to H37Rv, coordinate-sorted, indexed, per-sample read groups. Mapping 96.5-99.9%, properly paired 89.5-99.4%. |
+| 9. Post-alignment QC | complete | |
 | 10. Variant calling | not started | |
 | 11. Variant filtering | not started | |
 | 12. Annotation | not started | |
@@ -49,3 +49,24 @@ has been inspected.
 - FastQC "Per Base Sequence Content" fails in 46/60 files. This is expected
   for a 65% GC genome with standard library prep and was deliberately not
   acted upon.
+- Library preparation differs systematically by era: 80 bp reads with ~80 bp
+  inserts, 100 bp reads with ~165 bp inserts, 150 bp reads with ~250 bp
+  inserts. Longer inserts resolve repetitive regions better, so mapping
+  resolution is not uniform across the cohort.
+- Adapter contamination ranged 0-20% across libraries. Nextera adapters were
+  detected, not TruSeq; a hard-coded TruSeq sequence would have removed none.
+- Mapping rates 96.5-99.9%. Three isolates (ERR13273273, ERR4818219,
+  ERR4821953) map ~1-3% lower than the rest, consistent with reference bias
+  against strains divergent from H37Rv (lineage 4). Accessory sequence absent
+  from H37Rv cannot be assessed by reference-based calling.
+- ERR8975061 has zero coverage across ethA (4326003-4327673) despite 103x
+  genome-wide depth, consistent with a whole-gene deletion. Reference-based
+  variant calling cannot represent deletions of this scale as variant calls;
+  they are detectable only through coverage analysis. Any gene not examined
+  for coverage could carry an undetected deletion.
+- rrs coverage at 30x is incomplete in five isolates (43.5-96.3%), all short-read
+  libraries. Aminoglycoside resistance calls from rrs would be unreliable in
+  these samples. INH/RIF target genes are unaffected.
+- All 30 isolates have 100% coverage at 30x across katG, rpoB, fabG1, inhA and
+  ahpC including 200 bp promoter flanks, so wild-type calls for the two target
+  drugs are supported by data rather than absence of data.

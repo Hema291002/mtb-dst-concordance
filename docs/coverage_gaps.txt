@@ -1,0 +1,14 @@
+ERR2510662     pncA       99.9% at 30X
+ERR3287554     embB       95.9% at 30X
+ERR4797483     ethA       92.9% at 30X
+ERR4797823     rrs        99.4% at 30X
+ERR4799708     pncA       99.9% at 30X
+ERR4814489     rrs        43.5% at 30X
+ERR4818219     rrs        96.3% at 30X
+ERR4821755     rrs        52.3% at 30X
+ERR4821755     pncA       99.9% at 30X
+ERR4821953     rrs        72.4% at 30X
+ERR8975061     ethA        0.0% at 30X
+SRR2100603     pncA       99.9% at 30X
+SRR6045767     rrs        95.3% at 30X
+SRR6045767     pncA       99.9% at 30X
