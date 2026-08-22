@@ -70,3 +70,6 @@ has been inspected.
 - All 30 isolates have 100% coverage at 30x across katG, rpoB, fabG1, inhA and
   ahpC including 200 bp promoter flanks, so wild-type calls for the two target
   drugs are supported by data rather than absence of data.
+- Gene-scale deletions are invisible to variant calling. One was found by
+  coverage analysis (see docs/findings/ethA_deletion_ERR8975061.md). Genes
+  not examined for coverage could carry undetected deletions.
