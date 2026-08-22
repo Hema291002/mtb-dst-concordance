@@ -1,0 +1,9 @@
+name: mtb-call
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bcftools>=1.19
+  - samtools>=1.19
+  - freebayes>=1.3
+  - tabix
