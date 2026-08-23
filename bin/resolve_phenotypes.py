@@ -39,7 +39,7 @@ resolved = {(r["UNIQUEID"], r["DRUG"]): (r["PHENOTYPE"], r["QUALITY"],
 
 changed = 0
 with open(OUT, "w", newline="") as fh:
-    w = csv.writer(fh)
+    w = csv.writer(fh, lineterminator="\n")
     w.writerow(["run_accession", "UNIQUEID", "drug", "phenotype",
                 "quality", "source", "changed_from_original"])
     for uid, r in sorted(byuid.items()):
