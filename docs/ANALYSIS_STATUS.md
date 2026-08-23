@@ -17,8 +17,8 @@ has been inspected.
 | 9. Post-alignment QC | complete | |
 | 10. Variant calling | complete | bcftools mpileup/call, --ploidy 1, -q 20 -Q 20 -d 500. No BQSR (no known-sites resource exists for M. tuberculosis). Raw counts 724-2517. |
 | 11. Variant filtering | complete | QUAL>=30, DP>=10, MQ>=40, allele fraction>=0.9, outside repeat mask. Retention 67.4-76.9%, no sample-level outliers. |
-| 12. Annotation | not started | |
-| 13. WHO catalogue interpretation | not started | |
+| 12. Annotation | complete | Custom annotator (bcftools csq incompatible with RefSeq bacterial GFF). Validated against rpoB S450L, katG S315T, fabG1 c.-15. 90 variants in 5 genes. |
+| 13. WHO catalogue interpretation | complete | WHO v2 (2023), coordinate matching per catalogue instructions. 88/90 variants graded. Predicted: INH 14R/16S, RIF 15R/15S. |
 | 14. Phenotype comparison | not started | |
 | 15. Lineage assignment | not started | |
 | 16. Nextflow pipeline | not started | |
