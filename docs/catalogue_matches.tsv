@@ -1,0 +1,91 @@
+sample	pos	ref	alt	gene	our_notation	effect	who_variant	INH_grade	RIF_grade	tier
+ERR13261328	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR13261328	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR13261328	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR13261328	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR13273273	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR13273273	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR13273273	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR190365	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR190365	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR190365	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR190365	2726051	G	A	ahpC	ahpC c.-142G>A	promoter	NOT_IN_CATALOGUE			
+ERR229953	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR229953	1674048	G	A	fabG1	fabG1 L203L	synonymous	inhA_c.-154G>A	1) Assoc w R		1
+ERR229953	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR2510201	760082	C	T	rpoB	rpoB D92D	synonymous	rpoB_c.276C>T		4) Not assoc w R - Interim	1
+ERR2510201	760663	C	T	rpoB	rpoB A286V	missense	rpoB_p.Ala286Val		3) Uncertain significance	1
+ERR2510201	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR2510662	759746	C	T	rpoB	rpoB c.-61C>T	promoter	rpoB_c.-61C>T		5) Not assoc w R	1
+ERR2510662	761139	C	T	rpoB	rpoB H445Y	missense	rpoB_p.His445Tyr		1) Assoc w R	1
+ERR2510662	762434	T	G	rpoB	rpoB G876G	synonymous	rpoB_c.2628T>G		5) Not assoc w R	1
+ERR2510662	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR2510662	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR2510662	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR2510662	2726105	G	A	ahpC	ahpC c.-88G>A	promoter	ahpC_c.-88G>A	5) Not assoc w R		1
+ERR2512913	761489	G	A	rpoB	rpoB E561E	synonymous	rpoB_c.1683G>A		5) Not assoc w R	1
+ERR3287554	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR3287554	2155786	G	A	katG	katG A109V	missense	katG_p.Ala109Val	3) Uncertain significance		1
+ERR4797483	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR4797483	1673406	C	G	fabG1	fabG1 c.-34C>G	promoter	inhA_c.-796C>G	3) Uncertain significance		1
+ERR4797483	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR4797823	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR4797823	762724	G	A	rpoB	rpoB G973D	missense	rpoB_p.Gly973Asp		3) Uncertain significance	1
+ERR4797823	1673425	C	T	fabG1	fabG1 c.-15C>T	promoter	inhA_c.-777C>T	1) Assoc w R		1
+ERR4797823	2155229	G	T	katG	katG Q295K	missense	katG_p.Gln295Lys	3) Uncertain significance		1
+ERR4797823	2726145	G	A	ahpC	ahpC c.-48G>A	promoter	ahpC_c.-48G>A	3) Uncertain significance		1
+ERR4799708	759746	C	T	rpoB	rpoB c.-61C>T	promoter	rpoB_c.-61C>T		5) Not assoc w R	1
+ERR4799708	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR4799708	762434	T	G	rpoB	rpoB G876G	synonymous	rpoB_c.2628T>G		5) Not assoc w R	1
+ERR4799708	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR4799708	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR4799708	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR4799708	2726105	G	A	ahpC	ahpC c.-88G>A	promoter	ahpC_c.-88G>A	5) Not assoc w R		1
+ERR4808873	761139	C	T	rpoB	rpoB H445Y	missense	rpoB_p.His445Tyr		1) Assoc w R	1
+ERR4808873	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR4808873	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR4809179	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR4813445	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR4813445	1673425	C	T	fabG1	fabG1 c.-15C>T	promoter	inhA_c.-777C>T	1) Assoc w R		1
+ERR4813445	1674263	T	C	inhA	inhA I21T	missense	inhA_p.Ile21Thr	3) Uncertain significance		1
+ERR4813681	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR4813681	761889	G	C	rpoB	rpoB V695L	missense	rpoB_p.Val695Leu		3) Uncertain significance	1
+ERR4814489	760490	C	T	rpoB	rpoB V228V	synonymous	rpoB_c.684C>T		5) Not assoc w R	1
+ERR4814489	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR4814489	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR4814489	2726051	G	A	ahpC	ahpC c.-142G>A	promoter	NOT_IN_CATALOGUE			
+ERR4821755	759746	C	T	rpoB	rpoB c.-61C>T	promoter	rpoB_c.-61C>T		5) Not assoc w R	1
+ERR4821755	762434	T	G	rpoB	rpoB G876G	synonymous	rpoB_c.2628T>G		5) Not assoc w R	1
+ERR4821755	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR4821755	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR4821755	2726105	G	A	ahpC	ahpC c.-88G>A	promoter	ahpC_c.-88G>A	5) Not assoc w R		1
+ERR4831878	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR5918134	1673425	C	T	fabG1	fabG1 c.-15C>T	promoter	inhA_c.-777C>T	1) Assoc w R		1
+ERR5918134	1674262	A	G	inhA	inhA I21V	missense	inhA_p.Ile21Val	3) Uncertain significance		1
+ERR8975061	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+ERR8975559	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR8975559	1674210	A	C	inhA	inhA G3G	synonymous	inhA_c.9A>C	5) Not assoc w R		1
+ERR8975559	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR9119614	760106	G	A	rpoB	rpoB S100S	synonymous	rpoB_c.300G>A		5) Not assoc w R	1
+ERR9119614	760115	C	T	rpoB	rpoB D103D	synonymous	rpoB_c.309C>T		5) Not assoc w R	1
+ERR9119614	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR9119614	2154441	C	G	katG	katG K557N	missense	katG_p.Lys557Asn	3) Uncertain significance		1
+ERR9125253	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+ERR9125253	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+ERR9125253	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+ERR9125253	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1
+SRR2100603	759746	C	T	rpoB	rpoB c.-61C>T	promoter	rpoB_c.-61C>T		5) Not assoc w R	1
+SRR2100603	762434	T	G	rpoB	rpoB G876G	synonymous	rpoB_c.2628T>G		5) Not assoc w R	1
+SRR2100603	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+SRR2100603	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+SRR2100603	2726105	G	A	ahpC	ahpC c.-88G>A	promoter	ahpC_c.-88G>A	5) Not assoc w R		1
+SRR6045767	759746	C	T	rpoB	rpoB c.-61C>T	promoter	rpoB_c.-61C>T		5) Not assoc w R	1
+SRR6045767	762434	T	G	rpoB	rpoB G876G	synonymous	rpoB_c.2628T>G		5) Not assoc w R	1
+SRR6045767	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+SRR6045767	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+SRR6045767	2726105	G	A	ahpC	ahpC c.-88G>A	promoter	ahpC_c.-88G>A	5) Not assoc w R		1
+SRR671855	759939	C	T	rpoB	rpoB P45S	missense	rpoB_p.Pro45Ser		3) Uncertain significance	1
+SRR671855	761155	C	T	rpoB	rpoB S450L	missense	rpoB_p.Ser450Leu		1) Assoc w R	1
+SRR671855	763031	T	C	rpoB	rpoB A1075A	synonymous	rpoB_c.3225T>C		5) Not assoc w R	1
+SRR671855	2154724	C	A	katG	katG R463L	missense	katG_p.Arg463Leu	5) Not assoc w R		1
+SRR671855	2155168	C	G	katG	katG S315T	missense	katG_p.Ser315Thr	1) Assoc w R		1

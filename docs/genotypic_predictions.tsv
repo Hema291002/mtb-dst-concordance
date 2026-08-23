@@ -1,0 +1,64 @@
+# genotypic resistance prediction from WHO catalogue v2 (2023)
+# predicted resistant if any variant graded 1) Assoc w R or 2) Assoc w R - Interim
+# phenotype data was not read by this script
+sample	drug	predicted	n_variants	variants
+ERR13261328	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR13261328	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR13273273	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR13273273	RIF	S	0	-
+ERR181948	INH	S	0	-
+ERR181948	RIF	S	0	-
+ERR190365	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR190365	RIF	S	0	-
+ERR229953	INH	R	2	inhA_c.-154G>A [1) Assoc w R];katG_p.Ser315Thr [1) Assoc w R]
+ERR229953	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR2510201	INH	S	0	-
+ERR2510201	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR2510662	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR2510662	RIF	R	1	rpoB_p.His445Tyr [1) Assoc w R]
+ERR2512913	INH	S	0	-
+ERR2512913	RIF	S	0	-
+ERR3287554	INH	S	0	-
+ERR3287554	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4797483	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR4797483	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4797823	INH	R	1	inhA_c.-777C>T [1) Assoc w R]
+ERR4797823	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4799708	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR4799708	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4808873	INH	S	0	-
+ERR4808873	RIF	R	1	rpoB_p.His445Tyr [1) Assoc w R]
+ERR4809179	INH	S	0	-
+ERR4809179	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4813445	INH	R	1	inhA_c.-777C>T [1) Assoc w R]
+ERR4813445	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4813681	INH	S	0	-
+ERR4813681	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4814489	INH	S	0	-
+ERR4814489	RIF	S	0	-
+ERR4818219	INH	S	0	-
+ERR4818219	RIF	S	0	-
+ERR4818435	INH	S	0	-
+ERR4818435	RIF	S	0	-
+ERR4821755	INH	S	0	-
+ERR4821755	RIF	S	0	-
+ERR4821953	INH	S	0	-
+ERR4821953	RIF	S	0	-
+ERR4831878	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR4831878	RIF	S	0	-
+ERR5918134	INH	R	1	inhA_c.-777C>T [1) Assoc w R]
+ERR5918134	RIF	S	0	-
+ERR8975061	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR8975061	RIF	S	0	-
+ERR8975559	INH	S	0	-
+ERR8975559	RIF	S	0	-
+ERR9119614	INH	S	0	-
+ERR9119614	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR9125253	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+ERR9125253	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
+SRR2100603	INH	S	0	-
+SRR2100603	RIF	S	0	-
+SRR6045767	INH	S	0	-
+SRR6045767	RIF	S	0	-
+SRR671855	INH	R	1	katG_p.Ser315Thr [1) Assoc w R]
+SRR671855	RIF	R	1	rpoB_p.Ser450Leu [1) Assoc w R]
