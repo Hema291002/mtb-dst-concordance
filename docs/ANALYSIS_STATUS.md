@@ -19,7 +19,7 @@ has been inspected.
 | 11. Variant filtering | complete | QUAL>=30, DP>=10, MQ>=40, allele fraction>=0.9, outside repeat mask. Retention 67.4-76.9%, no sample-level outliers. |
 | 12. Annotation | complete | Custom annotator (bcftools csq incompatible with RefSeq bacterial GFF). Validated against rpoB S450L, katG S315T, fabG1 c.-15. 90 variants in 5 genes. |
 | 13. WHO catalogue interpretation | complete | WHO v2 (2023), coordinate matching per catalogue instructions. 88/90 variants graded. Predicted: INH 14R/16S, RIF 15R/15S. |
-| 14. Phenotype comparison | not started | |
+| 14. Phenotype comparison | complete | Primary: INH sens 0.824 (0.590-0.938), spec 1.000 (0.772-1.000); RIF sens 1.000 (0.772-1.000), spec 0.882 (0.657-0.967). Sensitivity analysis with original labels gives overlapping intervals throughout. |
 | 15. Lineage assignment | not started | |
 | 16. Nextflow pipeline | not started | |
 | 17. R analysis and figures | not started | |
@@ -85,3 +85,12 @@ has been inspected.
   comparison; two remain unexplained after excluding multiallelic sites and
   malformed END fields. Impact negligible (0.2% of raw calls in one sample, in
   commands not used for any result). The production filter uses unrounded values.
+- Confidence intervals are wide at this sample size. Lower bounds range from
+  0.59 to 0.77 across the four measures. The study cannot distinguish good
+  performance from perfect performance, and cannot establish that rifampicin
+  prediction outperforms isoniazid prediction, though the literature supports
+  that relationship.
+- Two discordances (ERR4814489/INH, ERR8975559/INH) are present under both
+  phenotype labellings and are therefore not artefacts of the resolution rule.
+  All other discordances are labelling-dependent.
+
