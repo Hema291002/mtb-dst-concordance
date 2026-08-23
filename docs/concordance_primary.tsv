@@ -1,0 +1,61 @@
+sample	drug	predicted	phenotype	agreement	phenotype_changed	variants
+ERR13261328	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR13261328	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR13273273	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR13273273	RIF	S	S	concordant	no	-
+ERR181948	INH	S	S	concordant	no	-
+ERR181948	RIF	S	S	concordant	no	-
+ERR190365	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR190365	RIF	S	S	concordant	no	-
+ERR229953	INH	R	R	concordant	no	inhA_c.-154G>A [1) Assoc w R];katG_p.Ser315Thr [1) Assoc w R]
+ERR229953	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR2510201	INH	S	S	concordant	no	-
+ERR2510201	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR2510662	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR2510662	RIF	R	R	concordant	no	rpoB_p.His445Tyr [1) Assoc w R]
+ERR2512913	INH	S	S	concordant	no	-
+ERR2512913	RIF	S	S	concordant	no	-
+ERR3287554	INH	S	R	false_negative	yes	-
+ERR3287554	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4797483	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR4797483	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4797823	INH	R	R	concordant	no	inhA_c.-777C>T [1) Assoc w R]
+ERR4797823	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4799708	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR4799708	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4808873	INH	S	S	concordant	no	-
+ERR4808873	RIF	R	R	concordant	no	rpoB_p.His445Tyr [1) Assoc w R]
+ERR4809179	INH	S	S	concordant	no	-
+ERR4809179	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4813445	INH	R	R	concordant	yes	inhA_c.-777C>T [1) Assoc w R]
+ERR4813445	RIF	R	S	false_positive	yes	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4813681	INH	S	S	concordant	no	-
+ERR4813681	RIF	R	S	false_positive	yes	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR4814489	INH	S	R	false_negative	no	-
+ERR4814489	RIF	S	S	concordant	no	-
+ERR4818219	INH	S	S	concordant	no	-
+ERR4818219	RIF	S	S	concordant	no	-
+ERR4818435	INH	S	S	concordant	no	-
+ERR4818435	RIF	S	S	concordant	no	-
+ERR4821755	INH	S	S	concordant	no	-
+ERR4821755	RIF	S	S	concordant	no	-
+ERR4821953	INH	S	S	concordant	no	-
+ERR4821953	RIF	S	S	concordant	no	-
+ERR4831878	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR4831878	RIF	S	S	concordant	no	-
+ERR5918134	INH	R	R	concordant	no	inhA_c.-777C>T [1) Assoc w R]
+ERR5918134	RIF	S	S	concordant	no	-
+ERR8975061	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR8975061	RIF	S	S	concordant	no	-
+ERR8975559	INH	S	R	false_negative	no	-
+ERR8975559	RIF	S	S	concordant	no	-
+ERR9119614	INH	S	S	concordant	no	-
+ERR9119614	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+ERR9125253	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+ERR9125253	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]
+SRR2100603	INH	S	S	concordant	no	-
+SRR2100603	RIF	S	S	concordant	no	-
+SRR6045767	INH	S	S	concordant	no	-
+SRR6045767	RIF	S	S	concordant	no	-
+SRR671855	INH	R	R	concordant	no	katG_p.Ser315Thr [1) Assoc w R]
+SRR671855	RIF	R	R	concordant	no	rpoB_p.Ser450Leu [1) Assoc w R]

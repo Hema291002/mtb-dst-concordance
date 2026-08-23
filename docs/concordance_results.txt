@@ -1,0 +1,47 @@
+
+============================================================
+PRIMARY: quality-ranked phenotypes
+============================================================
+
+INH
+                  phenotype R    phenotype S
+  predicted R            14              0
+  predicted S             3             13
+  sensitivity  0.824  (14/17)   95% CI 0.590 to 0.938
+  specificity  1.000  (13/13)   95% CI 0.772 to 1.000
+
+RIF
+                  phenotype R    phenotype S
+  predicted R            13              2
+  predicted S             0             15
+  sensitivity  1.000  (13/13)   95% CI 0.772 to 1.000
+  specificity  0.882  (15/17)   95% CI 0.657 to 0.967
+
+============================================================
+SENSITIVITY: original keep=first labels
+============================================================
+
+INH
+                  phenotype R    phenotype S
+  predicted R            13              1
+  predicted S             2             14
+  sensitivity  0.867  (13/15)   95% CI 0.621 to 0.963
+  specificity  0.933  (14/15)   95% CI 0.702 to 0.988
+
+RIF
+                  phenotype R    phenotype S
+  predicted R            15              0
+  predicted S             0             15
+  sensitivity  1.000  (15/15)   95% CI 0.796 to 1.000
+  specificity  1.000  (15/15)   95% CI 0.796 to 1.000
+
+
+wrote /home/hema/mtb-data/results/catalogue/concordance_primary.tsv
+
+Discordances under each labelling:
+  primary  : 5  ERR3287554/INH, ERR4813445/RIF, ERR4813681/RIF, ERR4814489/INH, ERR8975559/INH
+  sensitivity: 3  ERR4813445/INH, ERR4814489/INH, ERR8975559/INH
+
+Note: sensitivity and specificity are estimable from this balanced-by-design sample.
+Positive and negative predictive value are not, because they depend on
+resistance prevalence in the population tested, which was set by design.
