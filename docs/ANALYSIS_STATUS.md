@@ -15,8 +15,8 @@ has been inspected.
 | 7. Trimming | complete | fastp 1.3.6, adapter auto-detect (Nextera found, not TruSeq), tail-only Q20 trimming, min length 50. All 30 retained, pass rate 91.9-99.7%. Post-trim coverage 64-144x. |
 | 8. Alignment | complete | bwa-mem2 2.2.1 to H37Rv, coordinate-sorted, indexed, per-sample read groups. Mapping 96.5-99.9%, properly paired 89.5-99.4%. |
 | 9. Post-alignment QC | complete | |
-| 10. Variant calling | not started | |
-| 11. Variant filtering | not started | |
+| 10. Variant calling | complete | bcftools mpileup/call, --ploidy 1, -q 20 -Q 20 -d 500. No BQSR (no known-sites resource exists for M. tuberculosis). Raw counts 724-2517. |
+| 11. Variant filtering | complete | QUAL>=30, DP>=10, MQ>=40, allele fraction>=0.9, outside repeat mask. Retention 67.4-76.9%, no sample-level outliers. |
 | 12. Annotation | not started | |
 | 13. WHO catalogue interpretation | not started | |
 | 14. Phenotype comparison | not started | |
@@ -73,3 +73,15 @@ has been inspected.
 - Gene-scale deletions are invisible to variant calling. One was found by
   coverage analysis (see docs/findings/ethA_deletion_ERR8975061.md). Genes
   not examined for coverage could carry undetected deletions.
+- The repeat mask removes both mapping artefacts and genuine variation. PE/PPE
+  gene families are hypervariable in M. tuberculosis, so some masked variants
+  are real. Short-read data cannot distinguish the two. This analysis makes no
+  claims about PE/PPE loci.
+- Filters were applied identically to SNPs and indels. Short-read indel calling
+  is less reliable than SNP calling, and some katG resistance mutations are
+  frameshifts. Indels are examined separately at the interpretation stage.
+- A count of low-allele-fraction variants in ERR181948 differed by 3 between two
+  exploratory commands (59 vs 62). One record is explained by rounding before
+  comparison; two remain unexplained after excluding multiallelic sites and
+  malformed END fields. Impact negligible (0.2% of raw calls in one sample, in
+  commands not used for any result). The production filter uses unrounded values.
