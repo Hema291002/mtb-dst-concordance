@@ -98,6 +98,7 @@ Lineage assignment  ---- SNP barcode, same VCFs
 | mosdepth | 0.3.14 | Per-region coverage |
 | bcftools | 1.24 | Variant calling and filtering |
 | pandas / pyarrow | | Metadata handling (Parquet) |
+| R / tidyverse | 4.5.3 | Figures and confidence intervals |
 
 Environments are declared in [`envs/`](envs/) and each stage runs in its own.
 
@@ -167,9 +168,17 @@ Primary analysis. 95% Wilson score intervals.
 | Isoniazid | 0.824 (14/17) | 0.590 – 0.938 | 1.000 (13/13) | 0.772 – 1.000 |
 | Rifampicin | 1.000 (13/13) | 0.772 – 1.000 | 0.882 (15/17) | 0.657 – 0.967 |
 
+![Genotypic prediction estimates with 95% Wilson intervals](docs/figures/fig1_confidence_intervals.png)
+
 **The intervals are the result, not the point estimates.** Every lower bound falls between 0.59 and 0.77. This study cannot distinguish good performance from perfect performance, and cannot independently establish that rifampicin prediction outperforms isoniazid prediction, although the literature supports that relationship.
 
 A sensitivity analysis using the alternative phenotype labelling gives intervals that overlap the primary analysis throughout, so the conclusions do not depend on that choice. See [`docs/findings/phenotype_conflicts.md`](docs/findings/phenotype_conflicts.md).
+
+Eleven gradings across both drugs fell in WHO confidence group 3, uncertain
+significance: variants the catalogue's analysis of 52,000 isolates could not
+resolve either way. These were treated as not predicting resistance, which is
+the conventional and conservative reading, but it is a choice. Moving group 3
+into the resistant set would change both sensitivity and specificity.
 
 ### Variants found
 
@@ -195,9 +204,13 @@ No isolate carried off-path barcode markers, so no evidence of mixed infection. 
 
 **Presence in a resistance gene does not imply a resistance mechanism.** `katG R463L` appeared in 13 isolates, more than carried `katG S315T`. The WHO catalogue grades it **5, not associated with resistance**. It is present in exactly the 13 non-lineage-4 isolates and absent from all 16 lineage-4 isolates: a phylogenetic marker, not a resistance mutation. Scoring every non-synonymous *katG* change as resistance would have produced 13 false positives.
 
+![Variant heatmap by lineage](docs/figures/fig5_variant_heatmap.png)
+
+*katG* R463L forms a solid band across lineages 1, 2 and 3 and is absent from every lineage 4 isolate. Two further lineage markers are visible: *ahpC* c.-88G>A with *rpoB* c.-61C>T confined to lineage 3, and *ahpC* c.-142G>A confined to lineage 1.
+
 **Promoter regions must be included.** The second commonest isoniazid resistance mutation lies 15 bases upstream of *fabG1*, outside the gene body. Target regions here extend 200 bp upstream, strand-aware. Restricting to coding sequence would have missed it in 3 isolates.
 
-**Two discordances are robust and unexplained.** ERR4814489 and ERR8975559 are phenotypically isoniazid-resistant with no graded tier 1 variant, under both phenotype labellings. Both have complete 30x coverage across all isoniazid genes, ruling out a coverage gap or a gene deletion. Neither carries any sub-threshold variant, ruling out heteroresistance or a filtering artefact. ERR8975559 has an MIC greater than 12.8 against a critical concentration of 0.1, making phenotype error implausible. **A tier 2 gene or an uncatalogued mechanism remains.**
+**Two discordances are robust and unexplained.** ERR4814489 and ERR8975559 are phenotypically isoniazid-resistant with no graded tier 1 variant, under both phenotype labellings. Both have complete 30x coverage across all isoniazid genes, ruling out a coverage gap or a gene deletion. Neither carries any sub-threshold variant, ruling out heteroresistance or a filtering artefact. ERR8975559 has an MIC greater than 12.8 against a critical concentration of 0.1, making phenotype error implausible. **A tier 2 gene or an uncatalogued mechanism remains.** Five explanations were eliminated with evidence: coverage gap, gene deletion, heteroresistance, filtering artefact, and uncertain grading. See [`docs/findings/unexplained_inh_resistance.md`](docs/findings/unexplained_inh_resistance.md).
 
 **One finding is invisible to variant calling entirely.** ERR8975061 carries a 3,275 bp homozygous deletion removing *rraA*, *ethA* and *ethR*. Loss of *ethA*, which activates ethionamide, is a documented resistance mechanism. No VCF can express absent sequence; this was found only by coverage analysis. See [`docs/findings/ethA_deletion_ERR8975061.md`](docs/findings/ethA_deletion_ERR8975061.md).
 
@@ -245,11 +258,11 @@ The consortium's own resistance predictions and lineage assignments were quarant
 
 ## Status
 
-**Completed:** sample selection, data acquisition, QC, trimming, alignment, duplicate marking, coverage assessment, variant calling, filtering, annotation, WHO catalogue interpretation, phenotype comparison, lineage assignment.
+**Completed:** sample selection, data acquisition, QC, trimming, alignment, duplicate marking, coverage assessment, variant calling, filtering, annotation, WHO catalogue interpretation, phenotype comparison, lineage assignment, R analysis and figures.
 
-**Not yet done:** R analysis and publication-quality figures; Nextflow implementation of the pipeline.
+**Not yet done:** Nextflow implementation of the pipeline.
 
-The bash and Python scripts here are the working pipeline. Nextflow would add resumability across machines, containerisation and portability, and is planned rather than claimed. See [`docs/ANALYSIS_STATUS.md`](docs/ANALYSIS_STATUS.md) for the per-stage record.
+The bash and Python scripts here are the working pipeline. Nextflow would add portability, containerisation and parallel execution, and is planned rather than claimed. See [`docs/ANALYSIS_STATUS.md`](docs/ANALYSIS_STATUS.md) for the per-stage record.
 
 ## Future improvements
 
