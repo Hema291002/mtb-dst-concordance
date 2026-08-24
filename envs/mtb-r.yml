@@ -1,0 +1,8 @@
+name: mtb-r
+channels:
+  - conda-forge
+dependencies:
+  - r-base>=4.3
+  - r-tidyverse
+  - r-patchwork
+  - r-scales
