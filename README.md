@@ -267,7 +267,6 @@ The bash and Python scripts here are the working pipeline. Nextflow would add po
 ## Future improvements
 
 - Nextflow DSL2 implementation with containerised processes and a test profile
-- R analysis: variant frequency by lineage, coverage distributions, transition/transversion ratios, confidence interval visualisation
 - Extension to WHO tier 2 genes, to test whether either robust discordance is explained
 - Independent variant calling with freebayes as a concordance check
 - Computed mappability track in place of the gene-family-based mask
