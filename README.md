@@ -235,7 +235,7 @@ Three predictions were committed to git **before** the relevant data was consult
 |---|---|---|
 | `katG R463L` grades as not associated with resistance despite appearing in 13 isolates | [`catalogue_predictions.md`](docs/findings/catalogue_predictions.md) | Confirmed, grade 5 |
 | Variant-count clusters correspond to lineages ordered by distance from H37Rv | [`variant_count_clusters.md`](docs/findings/variant_count_clusters.md) | Confirmed; one sub-claim failed and is recorded |
-| ERR8975061 is ethionamide-resistant given its *ethA* deletion | [`ethA_deletion_ERR8975061.md`](docs/findings/ethA_deletion_ERR8975061.md) | Pending phenotype check |
+| ERR8975061 is ethionamide-resistant given its *ethA* deletion | [`ethA_deletion_ERR8975061.md`](docs/findings/ethA_deletion_ERR8975061.md) | Confirmed, ETH resistant, MIC>8, two independent measurements. |
 
 The consortium's own resistance predictions and lineage assignments were quarantined before analysis began ([`docs/held_out_rationale.md`](docs/held_out_rationale.md)) so that filtering thresholds could not be tuned toward a known answer.
 

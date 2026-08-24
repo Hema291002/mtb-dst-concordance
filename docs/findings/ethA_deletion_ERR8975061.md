@@ -69,3 +69,42 @@ indication of why.
       bam_markdup/ERR8975061.markdup.bam | awk '...'   # breakpoints
     samtools depth -a -r NC_000962.3:4325500-4328200 \
       bam_markdup/ERR181948.markdup.bam                # control
+## Outcome (checked 2026-08-24)
+
+The registered prediction is confirmed.
+
+| Source | Result | Quality |
+|---|---|---|
+| DST_MEASUREMENTS, liquid media, CRyPTIC | ETH resistant | HIGH |
+| UKMYC plate assay | ETH MIC >8, resistant | HIGH |
+
+Two independent measurements agree.
+
+### Why the deletion is the parsimonious explanation
+
+The isolate is susceptible to 10 of the 14 drugs tested (AMI, BDQ, CFZ, DLM,
+KAN, LEV, LZD, MXF, RFB, RIF), so the ethionamide resistance is specific
+rather than part of a broadly resistant profile.
+
+Isoniazid and ethionamide share a target, InhA, so inhA promoter mutations
+confer cross-resistance to both. This isolate carries no inhA or fabG1
+variant. Its only non-synonymous variant in the five annotated genes is
+katG S315T, which blocks isoniazid activation by KatG. KatG plays no part in
+activating ethionamide, which is activated by EthA. The isoniazid mechanism
+therefore cannot account for the ethionamide phenotype.
+
+### What this does not establish
+
+- Causation. One isolate with one deletion is consistent with the mechanism,
+  not a demonstration of it. ethA coverage was not examined in the other 29
+  isolates, so no comparison group exists.
+- The isolate is also resistant to ethambutol (EMB, MIC 8.0). embB was
+  included in the coverage targets but not annotated, since this analysis was
+  scoped to isoniazid and rifampicin. That resistance is unexplained here.
+
+### Significance
+
+The deletion was found by coverage analysis alone. No variant caller in this
+pipeline emits a record for absent sequence. A genotypic prediction based on
+variant calls would have reported this isolate as carrying no ethionamide
+resistance mechanism, and would have been wrong.
