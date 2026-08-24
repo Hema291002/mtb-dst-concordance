@@ -204,16 +204,16 @@ p3 <- ggplot(vc, aes(x = filtered, y = sample, colour = lineage_top)) +
     subtitle = paste("H37Rv is lineage 4. Distance from the reference tracks",
                      "phylogenetic distance."),
     x = "Filtered variants", y = NULL,
-    caption = paste(
-      "The grouping was predicted from these counts before lineage was",
-      "assigned (docs/findings/variant_count_clusters.md).\nLineages 2 and 3",
-      "overlap because both are roughly equidistant from lineage 4: variant",
-      "count resolves\ndepth, not direction."
+        caption = paste(
+      "Grouping was predicted from these counts before lineage was assigned",
+      "(see docs/findings/).\nLineages 2 and 3 overlap: both are roughly",
+      "equidistant from lineage 4, so variant count resolves\ndepth, not",
+      "direction."
     )
   )
 
 ggsave(file.path(OUT, "fig3_variants_by_lineage.png"), p3,
-       width = 7, height = 7.5, dpi = 300, bg = "white")
+       width = 9, height = 7.5, dpi = 300, bg = "white")
 
 # ---------------------------------------------------------------------------
 # Figure 4: coverage over the target genes
@@ -236,6 +236,8 @@ p4 <- ggplot(cov_t, aes(x = mean_depth, y = gene)) +
   scale_fill_manual(values = c(`TRUE` = "#5ab4ac", `FALSE` = "grey85"),
                     guide = "none") +
   scale_x_continuous(expand = expansion(mult = c(0.02, 0.05))) +
+    annotate("text", x = 3, y = "ethA", label = "ERR8975061\nethA deleted",
+           hjust = 0, size = 2.6, colour = "#8c510a", lineheight = 0.9) +
   labs(
     title = "Mean depth over resistance-associated genes",
     subtitle = paste("Each point is one isolate. Teal genes are the five",
