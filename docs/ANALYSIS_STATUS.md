@@ -20,9 +20,9 @@ has been inspected.
 | 12. Annotation | complete | Custom annotator (bcftools csq incompatible with RefSeq bacterial GFF). Validated against rpoB S450L, katG S315T, fabG1 c.-15. 90 variants in 5 genes. |
 | 13. WHO catalogue interpretation | complete | WHO v2 (2023), coordinate matching per catalogue instructions. 88/90 variants graded. Predicted: INH 14R/16S, RIF 15R/15S. |
 | 14. Phenotype comparison | complete | Primary: INH sens 0.824 (0.590-0.938), spec 1.000 (0.772-1.000); RIF sens 1.000 (0.772-1.000), spec 0.882 (0.657-0.967). Sensitivity analysis with original labels gives overlapping intervals throughout. |
-| 15. Lineage assignment | not started | |
-| 16. Nextflow pipeline | not started | |
-| 17. R analysis and figures | not started | |
+| 15. Lineage assignment | complete | TB-Profiler barcode, 1,111 positions. 16 lineage 4, 6 lineage 2, 5 lineage 3, 2 lineage 1, 1 unassigned (likely 4.9, undetectable from a variants-only VCF). Registered clustering prediction confirmed. |
+| 16. Nextflow pipeline | complete | DSL2, six modules covering the per-sample path. Validated against the original scripts: identical output on all 30 samples. Cohort-level analyses remain as scripts. |
+| 17. R analysis and figures | complete | Five figures in docs/figures/. Confidence intervals recomputed independently in R and agree with the Python scoring. |
 
 ## Held out until stage 14
 - `data/meta/held_out/PREDICTIONS.parquet`

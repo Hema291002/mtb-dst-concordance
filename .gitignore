@@ -16,3 +16,4 @@ results_nf/
 results_test/
 .nextflow/
 work/
+data/meta/**

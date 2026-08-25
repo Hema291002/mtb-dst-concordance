@@ -25,3 +25,19 @@ mappability track. It is the field-standard approach but not optimal. Some
 short repeats (39-53 bp) are masked despite being spanned by 150 bp reads,
 so the mask errs toward over-exclusion. Verified to have no overlap with
 targets.bed (positive control applied to confirm the check functions).
+
+## Comparison against TB-Profiler's mask
+
+TB-Profiler (jodyphelan/tbdb) distributes a mask of 2,299 regions covering
+311,910 bases, 7.07% of the genome. The mask here covers 364,536 bases, 8.26%,
+in 297 regions.
+
+The two agree closely on total extent despite being built differently. The much
+larger number of smaller regions in TB-Profiler's version is consistent with a
+computed mappability track, which excludes unmappable parts of genes rather
+than whole genes. Excluding whole gene families, as done here, removes slightly
+more sequence, which is the conservative direction.
+
+13 of 1,111 barcode positions (1.2%) fall inside this mask. Lineage assignment
+therefore uses raw VCFs with depth and allele-fraction thresholds applied
+directly, rather than the mask-filtered VCFs.
