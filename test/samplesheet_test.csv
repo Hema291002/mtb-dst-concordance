@@ -1,0 +1,3 @@
+sample,fastq_1,fastq_2
+ERR181948,test/data/ERR181948_1.fastq.gz,test/data/ERR181948_2.fastq.gz
+ERR13261328,test/data/ERR13261328_1.fastq.gz,test/data/ERR13261328_2.fastq.gz

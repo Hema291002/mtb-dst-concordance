@@ -1,0 +1,7 @@
+name: mtb-nf
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - nextflow>=24.10
+  - openjdk>=17

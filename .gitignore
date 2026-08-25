@@ -11,3 +11,8 @@ results/
 .Rhistory
 .RData
 .Rproj.user/
+test/data/
+results_nf/
+results_test/
+.nextflow/
+work/
