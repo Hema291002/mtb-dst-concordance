@@ -5,7 +5,8 @@
  * https://github.com/Hema291002/mtb-dst-concordance
  */
 
-include { FASTP } from './modules/local/fastp'
+include { FASTP          } from './modules/local/fastp'
+include { BWAMEM2_ALIGN  } from './modules/local/bwamem2_align'
 
 workflow {
 
@@ -28,6 +29,16 @@ workflow {
 
     FASTP(ch_reads)
 
-    FASTP.out.reads.view { meta, reads -> "trimmed: ${meta.id} -> ${reads*.name}" }
-}
+    // The reference and its bwa-mem2 index are staged into every alignment
+    // task. They are single values, not per-sample, so they go into value
+    // channels: a value channel can be consumed repeatedly, whereas a queue
+    // channel is drained after one use and the second sample would hang.
+    ch_fasta = Channel.value(file(params.fasta, checkIfExists: true))
+    ch_index = Channel.value(
+        file("${params.fasta}.{0123,amb,ann,bwt.2bit.64,pac}", checkIfExists: true)
+    )
+
+    BWAMEM2_ALIGN(FASTP.out.reads, ch_fasta, ch_index)
+
+    BWAMEM2_ALIGN.out.bam.view { meta, bam, bai -> "aligned: ${meta.id} -> ${bam.name}" }}
 
