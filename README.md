@@ -155,6 +155,19 @@ python3 bin/score_concordance.py
 
 Every script is resumable: completed samples are detected and skipped.
 
+### Or via Nextflow
+
+```bash
+nextflow run main.nf -profile test,conda          # two subsampled isolates
+nextflow run main.nf -profile conda \
+    --input assets/samplesheet_nf.csv \
+    --fasta path/to/H37Rv.fna \
+    --mask assets/regions/mask.bed \
+    --targets assets/regions/targets.bed
+```
+
+Profiles: `conda`, `docker`, `singularity`, `test`. Every filter threshold is a parameter, so `--min_af 0.95` overrides it without editing code.
+
 ---
 
 ## Results
@@ -258,11 +271,11 @@ The consortium's own resistance predictions and lineage assignments were quarant
 
 ## Status
 
-**Completed:** sample selection, data acquisition, QC, trimming, alignment, duplicate marking, coverage assessment, variant calling, filtering, annotation, WHO catalogue interpretation, phenotype comparison, lineage assignment, R analysis and figures.
+**Completed:** sample selection, data acquisition, QC, trimming, alignment, duplicate marking, coverage assessment, variant calling, filtering, annotation, WHO catalogue interpretation, phenotype comparison, lineage assignment, R analysis and figures, Nextflow implementation of the per-sample path.
 
-**Not yet done:** Nextflow implementation of the pipeline.
+The Nextflow pipeline covers the per-sample path: trim, align, mark duplicates, coverage, call, filter. Cohort-level analyses (sample selection, catalogue interpretation, phenotype resolution, lineage assignment) remain as scripts in `bin/`, which is the same split nf-core pipelines make.
 
-The bash and Python scripts here are the working pipeline. Nextflow would add portability, containerisation and parallel execution, and is planned rather than claimed. See [`docs/ANALYSIS_STATUS.md`](docs/ANALYSIS_STATUS.md) for the per-stage record.
+It was validated against the original scripts: identical filtered variant counts across all 30 samples, and identical variant positions on the sample checked in detail. See [`docs/findings/nextflow_validation.md`](docs/findings/nextflow_validation.md).
 
 ## Future improvements
 
