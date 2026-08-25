@@ -8,6 +8,7 @@
 include { FASTP          } from './modules/local/fastp'
 include { BWAMEM2_ALIGN  } from './modules/local/bwamem2_align'
 include { SAMTOOLS_MARKDUP } from './modules/local/samtools_markdup'
+include { BCFTOOLS_CALL     } from './modules/local/bcftools_call'
 
 workflow {
 
@@ -43,6 +44,9 @@ workflow {
 
     SAMTOOLS_MARKDUP(BWAMEM2_ALIGN.out.bam)
 
-    SAMTOOLS_MARKDUP.out.bam.view { meta, bam, bai -> "markdup: ${meta.id}" }
+    ch_fai = Channel.value(file("${params.fasta}.fai", checkIfExists: true))
 
+    BCFTOOLS_CALL(SAMTOOLS_MARKDUP.out.bam, ch_fasta, ch_fai)
+
+    BCFTOOLS_CALL.out.vcf.view { meta, vcf, csi -> "called: ${meta.id}" }
 }
