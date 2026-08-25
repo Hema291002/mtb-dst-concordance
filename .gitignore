@@ -17,3 +17,4 @@ results_test/
 .nextflow/
 work/
 data/meta/**
+!data/meta/README.md
