@@ -9,6 +9,8 @@ include { FASTP          } from './modules/local/fastp'
 include { BWAMEM2_ALIGN  } from './modules/local/bwamem2_align'
 include { SAMTOOLS_MARKDUP } from './modules/local/samtools_markdup'
 include { BCFTOOLS_CALL     } from './modules/local/bcftools_call'
+include { BCFTOOLS_FILTER   } from './modules/local/bcftools_filter'
+include { MOSDEPTH          } from './modules/local/mosdepth'
 
 workflow {
 
@@ -44,9 +46,17 @@ workflow {
 
     SAMTOOLS_MARKDUP(BWAMEM2_ALIGN.out.bam)
 
+    ch_targets = Channel.value(file(params.targets, checkIfExists: true))
+
+    MOSDEPTH(SAMTOOLS_MARKDUP.out.bam, ch_targets)
+
     ch_fai = Channel.value(file("${params.fasta}.fai", checkIfExists: true))
 
     BCFTOOLS_CALL(SAMTOOLS_MARKDUP.out.bam, ch_fasta, ch_fai)
 
-    BCFTOOLS_CALL.out.vcf.view { meta, vcf, csi -> "called: ${meta.id}" }
+    ch_mask = Channel.value(file(params.mask, checkIfExists: true))
+
+    BCFTOOLS_FILTER(BCFTOOLS_CALL.out.vcf, ch_mask)
+
+    BCFTOOLS_FILTER.out.vcf.view { meta, vcf, csi -> "filtered: ${meta.id}" }
 }
