@@ -7,6 +7,7 @@
 
 include { FASTP          } from './modules/local/fastp'
 include { BWAMEM2_ALIGN  } from './modules/local/bwamem2_align'
+include { SAMTOOLS_MARKDUP } from './modules/local/samtools_markdup'
 
 workflow {
 
@@ -40,5 +41,8 @@ workflow {
 
     BWAMEM2_ALIGN(FASTP.out.reads, ch_fasta, ch_index)
 
-    BWAMEM2_ALIGN.out.bam.view { meta, bam, bai -> "aligned: ${meta.id} -> ${bam.name}" }}
+    SAMTOOLS_MARKDUP(BWAMEM2_ALIGN.out.bam)
 
+    SAMTOOLS_MARKDUP.out.bam.view { meta, bam, bai -> "markdup: ${meta.id}" }
+
+}
